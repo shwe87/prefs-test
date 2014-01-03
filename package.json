@@ -1,0 +1,48 @@
+{
+  "name": "prefs-test",
+  "title": "prefs-test",
+  "id": "jid1-Zsmz388InP3dhA",
+  "description": "a basic add-on",
+  "author": "",
+  "license": "MPL 2.0",
+  "version": "0.1",
+  "preferences": [
+        {
+            "type": "string",
+            "name": "deviceName",
+            "value": "username-desktop",
+            "title": "Name this device as: "
+        },
+        {
+           "type": "control",
+           "label": "Save device name",
+           "name": "saveDeviceName",
+           "title": "Save device name"
+        },
+        {
+	    "name": "extraServer",
+	    "type": "radio",
+	    "title": "Extra server",
+	    "value": "None",
+	    "options": [
+		{
+		    "value": "None",
+		    "label": "Don't user extra server"
+		},
+		{
+		    "value": "D",
+		    "label": "Use Dropbox"
+		},
+		{
+		    "value": "G",
+		    "label": "User Google-Drive"
+		},
+		{
+		    "value": "B",
+		    "label": "Use both"
+		
+		}
+	    ]
+	}
+    ]
+}

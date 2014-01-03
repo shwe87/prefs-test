@@ -1,0 +1,15 @@
+var prefs = require("sdk/simple-prefs");
+var panel = require("./panelControl.js");
+var panelMessage = panel.Panel();
+
+function onPrefChange(prefName) {
+    console.log("The " + prefs.prefs['deviceName'] + " preference changed.");
+    var message = {"msg":"The " + prefName + " preference changed.",'type':'correct'};
+    panelMessage.write(message);
+    panelMessage.show();
+    
+}
+prefs.on("extraServer", onPrefChange);
+prefs.on("saveDeviceName",onPrefChange);
+
+
